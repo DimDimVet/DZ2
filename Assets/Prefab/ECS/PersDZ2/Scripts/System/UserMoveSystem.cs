@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Unity.Entities;
+﻿using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using static UserInputData;
 
 namespace Assets.Prefab.ECS.PersDZ2

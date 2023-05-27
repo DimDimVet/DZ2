@@ -1,17 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.Entities;
-using Unity.Mathematics;
-using UnityEngine;
+﻿using Unity.Entities;
 using static UserInputData;
 
 public class UserShootSystem : ComponentSystem
 {
     private EntityQuery shootQuery;
-    //event
-    //public delegate void AnimMove(float2 moveSpeed);
-    //public static event AnimMove AnimMoveEvent;
-
     protected override void OnCreate()
     {
         shootQuery = GetEntityQuery(ComponentType.ReadOnly<ShootDataStr>(),
@@ -28,7 +20,6 @@ public class UserShootSystem : ComponentSystem
                 {
                     ability.Execute();
                 }
-                //AnimMoveEvent?.Invoke(inputData.Move);
             }
             );
     }

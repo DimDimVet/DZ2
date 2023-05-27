@@ -1,7 +1,4 @@
-﻿
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Assets.Prefab.ECS.PersDZ2;
 using Unity.Mathematics;
 
@@ -12,7 +9,7 @@ public class TranslationAnim : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        UserMoveSystem.AnimMoveEvent += GetMove;//подпишемся на событие радара
+        UserMoveSystem.AnimMoveEvent += GetMove;
         UserPullSystem.AnimPullEvent += GetPull;
     }
 
@@ -31,7 +28,7 @@ public class TranslationAnim : MonoBehaviour
     {
         if (currentPull)
         {
-            animator.SetBool("Jamp", currentPull); 
+            animator.SetBool("Jamp", true); 
         }
         else
         {

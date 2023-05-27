@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Unity.Entities;
-using Unity.Mathematics;
-using UnityEngine;
+﻿using Unity.Entities;
 using static UserInputData;
 
 public class UserPullSystem : ComponentSystem
@@ -27,11 +23,11 @@ public class UserPullSystem : ComponentSystem
                 if (inputData.Pull >0 && userInput.PullAction != null && userInput.PullAction is IPull pull)
                 {
                     pull.Jamp();
-                   // AnimPullEvent?.Invoke(true);
+                    AnimPullEvent?.Invoke(true);
                 }
                 else
                 {
-                   // AnimPullEvent?.Invoke(false);
+                    AnimPullEvent?.Invoke(false);
                 }
             }
             );
