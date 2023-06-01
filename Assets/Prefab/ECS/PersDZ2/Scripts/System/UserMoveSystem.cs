@@ -1,6 +1,7 @@
 ﻿using Unity.Entities;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static UserInputData;
 
 namespace Assets.Prefab.ECS.PersDZ2
@@ -23,10 +24,10 @@ namespace Assets.Prefab.ECS.PersDZ2
         {
             Entities.With(moveQuery).ForEach
                 (
-                (Entity entity, Transform transform, ref InputDataStr inputData, ref MoveDataStr moveData ) =>
+                (Entity entity, Transform transform, ref InputDataStr inputData, ref MoveDataStr moveData) =>
                 {
                     Vector3 currentPosition = transform.position;
-                    currentPosition += new Vector3(inputData.Move.x*moveData.MoveSpeed,
+                    currentPosition += new Vector3(inputData.Move.x * moveData.MoveSpeed,
                                                    0,
                                                    inputData.Move.y * moveData.MoveSpeed);
                     transform.position = currentPosition;
@@ -34,6 +35,7 @@ namespace Assets.Prefab.ECS.PersDZ2
                     AnimMoveEvent?.Invoke(inputData.Move);
                 }
                 );
+
         }
     }
 }

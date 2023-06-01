@@ -63,6 +63,7 @@
     <Compile Include="Assets\Prefab\ECS\PersDZ2\Scripts\Component\PullAbillity.cs" />
     <Compile Include="Assets\Prefab\ECS\PersDZ2\Scripts\Component\ShootAbillity.cs" />
     <Compile Include="Assets\Prefab\ECS\PersDZ2\Scripts\Component\UserInputData.cs" />
+    <Compile Include="Assets\Prefab\ECS\PersDZ2\Scripts\Map\PlayerInputControl.cs" />
     <Compile Include="Assets\Prefab\ECS\PersDZ2\Scripts\System\UserInputSystem.cs" />
     <Compile Include="Assets\Prefab\ECS\PersDZ2\Scripts\System\UserMoveSystem.cs" />
     <Compile Include="Assets\Prefab\ECS\PersDZ2\Scripts\System\UserPullSystem.cs" />

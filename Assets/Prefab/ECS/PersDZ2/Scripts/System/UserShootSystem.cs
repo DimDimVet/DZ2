@@ -16,7 +16,7 @@ public class UserShootSystem : ComponentSystem
             (
             (Entity entity, UserInputData userInput, ref InputDataStr inputData) =>
             {
-                if (inputData.Shoot>0f && userInput.ShootAction!=null && userInput.ShootAction is IAbility ability)
+                if (inputData.Shoot > 0f && userInput.ShootAction != null && userInput.ShootAction is IAbility ability)
                 {
                     ability.Execute();
                 }

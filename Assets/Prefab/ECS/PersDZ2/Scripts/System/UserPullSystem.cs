@@ -20,7 +20,7 @@ public class UserPullSystem : ComponentSystem
             (
             (Entity entity, UserInputData userInput, ref InputDataStr inputData) =>
             {
-                if (inputData.Pull >0 && userInput.PullAction != null && userInput.PullAction is IPull pull)
+                if (inputData.Pull > 0 && userInput.PullAction != null && userInput.PullAction is IPull pull)
                 {
                     pull.Jamp();
                     AnimPullEvent?.Invoke(true);
